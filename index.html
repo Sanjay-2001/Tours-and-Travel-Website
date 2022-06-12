@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <title>sTravels - Heaven for wanderers</title>
+  <style>
+    .img-pack {
+      position: relative;
+    }
+
+    .img-text {
+      position: absolute;
+      bottom: -13px;
+      right: 11px;
+      color: rgb(249, 251, 252);
+      text-shadow: 1px 3px 2px #091421;
+      font-size: 2rem;
+      font-weight: 450;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ...........Navigation bar........... -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+
+      <a class="navbar-brand" href="/">
+        <img src="/Images/logo.png" alt="logo" width="30" height="24">
+      </a>
+
+      <a class="navbar-brand" href="#">sTravels</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about.html">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#guide">Travel Brochure</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="/booking.html">Online Booking</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact.html">Contact Us</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light" type="submit">Search</button>
+        </form>
+        <div class="mx-2">
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#login-modal">
+            Login
+          </button>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#signup-modal">
+            Signup
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <!-- ...........login modal........... -->
+
+  <div class="modal" id="login-modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Log in to sTravels</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Remember Me</label>
+            </div>
+            <button type="submit" class="btn btn-dark">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ...........SignUp modal........... -->
+
+  <div class="modal" id="signup-modal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Get an sTravels account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+
+            <div class="row">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+              <input type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+            <button type="submit" class="btn btn-dark">Signup</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ...........Dismissing Alert........... -->
+  <!-- 
+    <div class="alert alert-info alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div> -->
+
+  <!-- ...........Carousel........... -->
+
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/Images/img1.jpg" height="553px" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Welcome to sTravels</h2>
+          <p>“It feels good to be lost in the right direction”</p>
+          <button type="button" class="btn btn-danger">Book</button>
+          <button type="button" class="btn btn-primary">Travel</button>
+          <button type="button" class="btn btn-success">Wander</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/Images/img2.jpg" height="553px" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Welcome to sTravels</h2>
+          <p>"Life is a journey, not a destination”</p>
+          <button type="button" class="btn btn-danger">Book</button>
+          <button type="button" class="btn btn-primary">Travel</button>
+          <button type="button" class="btn btn-success">Wander</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/Images/img3.jpg" height="553px" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Welcome to sTravels</h2>
+          <p>“Travel is the only thing you buy that makes you richer” </p>
+          <button type="button" class="btn btn-danger">Book</button>
+          <button type="button" class="btn btn-primary">Travel</button>
+          <button type="button" class="btn btn-success">Wander</button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- ...........card........... -->
+
+  <div class="container" id="guide">
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="img-pack">
+                <img src="images/gujarat.jpg" alt="Gujarat" width="100%" height="225">
+                <p class="img-text">Gujarat</p>
+              </div>
+              <div class="card-body">
+                <p class="card-text">It is renowned for its beaches, temple towns and historic capitals. Wildlife
+                  sanctuaries, hill resorts and natural grandeur are gifts of Gujarat.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/booking.html">
+                      <button type="button" class="btn btn-sm btn-outline-success">Book</button>
+                    </a>
+                  </div>
+
+                  <small class="text-muted">₹15000</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="img-pack">
+                <img src="images/kerala.jpg" alt="Kerala" width="100%" height="225">
+                <p class="img-text">Kerala</p>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Kerala is well-known for its mesmerizing backwaters, ecotourism initiatives, scenic
+                  beauty, amazing beaches, and mouthwatering cuisine.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/booking.html">
+                      <button type="button" class="btn btn-sm btn-outline-success">Book</button>
+                    </a>
+                  </div>
+                  <small class="text-muted">₹14000</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="img-pack">
+                <img src="images/maharashtra.jpg" alt="Maharashtra" width="100%" height="225">
+                <p class="img-text">Maharashtra</p>
+              </div>
+
+              <div class="card-body">
+                <p class="card-text">Maharashtra is popular for its many monuments, these stunning structures symbolise
+                  more than artistic talent, they are a treasured peek into the past.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/booking.html">
+                      <button type="button" class="btn btn-sm btn-outline-success">Book</button>
+                    </a>
+                  </div>
+                  <small class="text-muted">₹13500</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="img-pack">
+                <img src="images/goa.jpg" alt="Goa" width="100%" height="225">
+                <p class="img-text">Goa</p>
+              </div>
+
+              <div class="card-body">
+                <p class="card-text">Goa is famous for its ibrant culture, old churches and Portuguese-style houses, quaint by-lanes, breathtaking views, stunning monsoon greenery.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/booking.html">
+                      <button type="button" class="btn btn-sm btn-outline-success">Book</button>
+                    </a>
+                  </div>
+                  <small class="text-muted">₹15000</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="img-pack">
+                <img src="images/rajasthan.jpg" alt="Rajasthan" width="100%" height="225">
+                <p class="img-text">Rajasthan</p>
+              </div>
+
+              <div class="card-body">
+                <p class="card-text">Rajasthan is well famous for its majestic palaces, forts, historical sites, wildlife destinations, lakes, desert and camel safaris, numerous pilgrimage sites and festivals.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/booking.html">
+                      <button type="button" class="btn btn-sm btn-outline-success">Book</button>
+                    </a>
+                  </div>
+                  <small class="text-muted">₹12000</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="img-pack">
+                <img src="images/kashmir.jpg" alt="Kashmir" width="100%" height="225">
+                <p class="img-text">Jammu & Kashmir</p>
+              </div>
+              <div class="card-body">
+                <p class="card-text">Popularly known as the "Paradise on Earth", is famous for its scenic splendour, snow-capped mountains, plentiful wildlife, exquisite monuments, and local handicrafts.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/booking.html">
+                      <button type="button" class="btn btn-sm btn-outline-success">Book</button>
+                    </a>
+                  </div>
+                  <small class="text-muted">₹14500</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="img-pack">
+                <img src="images/bengal.jpg" alt="West Bengal" width="100%" height="225">
+                <p class="img-text">West Bengal</p>
+              </div>
+
+              <div class="card-body">
+                <p class="card-text">It presents some of marvelous landscape features and natural scenic beauty, literature, music, fine arts, drama, cinema also the Darjeeling Himalayan hill region.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/booking.html">
+                      <button type="button" class="btn btn-sm btn-outline-success">Book</button>
+                    </a>
+                  </div>
+                  <small class="text-muted">₹12500</small>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="img-pack">
+                <img src="images/himachal.jpg" alt="Himachal Pradesh" width="100%" height="225">
+                <p class="img-text">Himachal Pradesh</p>
+              </div>
+
+              <div class="card-body">
+                <p class="card-text">This is popularly renowned for its Himalayan landscapes and popular hill-stations. Many outdoor activities such as rock climbing, paragliding, ice-skating, trekking and rafting.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/booking.html">
+                      <button type="button" class="btn btn-sm btn-outline-success">Book</button>
+                    </a>
+                  </div>
+                  <small class="text-muted">₹13000</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card shadow-sm">
+              <div class="img-pack">
+                <img src="images/orissa.jpg" alt="Odisha" width="100%" height="225">
+                <p class="img-text">Odisha</p>
+              </div>
+
+              <div class="card-body">
+                <p class="card-text">Odisha is a land of secenic beauties ,sea beaches and extraordinary monuments, national parks and wildlife, traditional music, dance, handicrafts, tribal culture, and food.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                    <a href="/booking.html">
+                      <button type="button" class="btn btn-sm btn-outline-success">Book</button>
+                    </a>
+                  </div>
+                  <small class="text-muted">₹12500</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <!-- ...........footer........... -->
+
+  <footer class="modal-footer">
+    <footer class="container">
+
+      <p>© sTravels, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      <!-- <p class="float-end"><a href="#">Back to top</a></p> -->
+    </footer>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
